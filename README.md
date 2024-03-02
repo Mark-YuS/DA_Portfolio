@@ -48,7 +48,7 @@
 
 
 
-## Improving User Experience - Optimizing Product Recommendations and Conversion Rate through AB Testing
+## Improve Conversion rate and Optimize User experience through AB Testing
 
 
 <p>
@@ -56,21 +56,17 @@
 </p>
 
 
-
-
 **Collaborated with Engineering Teams and Delivered Winning A/B Tests**
 
-- Partnered seamlessly with cross-functional engineering teams, applying technical acumen to rapidly design and execute high-quality split tests.
-- Conducted comprehensive data analysis and collaborated with UX designers to develop refined UI prototypes based on data-driven insights.
-- Implemented a series of A/B testing experiments to validate the effectiveness of the UI changes on user preferences, leading to an impressive 12 basis point increase in product usage rate.
-- Employed rigorous statistical methodologies to ensure the experiments were well-structured, randomized, and statistically significant, providing actionable results.
+- Collaborated effortlessly with diverse engineering teams, leveraging technical expertise to develop and run high-quality split tests.
+- Applied strict statistical techniques to guarantee the experiments were methodically planned, randomized, and statistically valid, yielding results that could inform decision-making.
+- Implemented a series of A/B testing experiments to validate the effectiveness of the UI changes on user preferences, leading to make a data-driven decision. 
 
 **Utilized Fine-Tuned Logistic Regression for Launch Probability Assessment**
 
-- Developed and fine-tuned a sophisticated Logistic Regression model to assess the probability of successfully launching the UI changes.
+- Developed and fine-tuned a  Logistic Regression model to assess the probability of successfully launching the UI changes.
 - Leveraged various user-specific and historical engagement factors to make accurate predictions.
 - Delivered in-depth customer insights by interpreting the model results, enabling data-driven decision-making for the product development and marketing teams.
-- Facilitated strategic discussions on the UI change launch, ensuring alignment with business goals and user preferences.
 
 **Concrete Process and Agile Iterations**
 
@@ -81,16 +77,10 @@
 
 **Driving Operational Efficiency with Data-Driven Insights**
 
-- Demonstrated a deep understanding of user behavior patterns and preferences, leading to a remarkable 8% increase in operational efficiency.
+- Demonstrated a deep understanding of user behavior patterns and preferences. 
 - Acted on data-driven insights to make informed decisions on refining the product recommendation system and aligning it with user expectations.
 - Conducted thorough data analysis to identify correlations between UI changes and operational efficiencies, empowering stakeholders to prioritize initiatives effectively.
 
-**Result-Oriented Approach and Impact**
-
-- Successfully improved product usage rate by 12 basis points through data-backed UI changes, directly contributing to the company's revenue growth.
-- Enhanced operational efficiency by 8% through the implementation of customer-centric UI elements, showcasing a result-oriented approach to data science projects.
-- Recognized for excellent teamwork, collaboration, and the ability to deliver actionable insights that positively impacted business outcomes.
-- News Intelligence - Unleashing the Potential of User History for Click Prediction
 
 ## Revolutionizing Cash Flow Forecasts - A Paradigm Shift in Purchase and Redemption Predictions
 
