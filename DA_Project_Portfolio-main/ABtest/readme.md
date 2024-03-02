@@ -2,8 +2,9 @@
 
 
 <p>
-  <img src="https://github.com/datoujinggzj/DS_Project_Portfolio/assets/99417740/8499b84a-99b9-4890-b316-f5f4cd900bec" alt="Image" width="250" height="250">
+  <img src="https://github.com/Mark-YuS/DA_Portfolio/assets/151570035/166abc6c-0068-4342-933b-a4558d1b365a" alt="Image" width="250" height="250">
 </p>
+
 
 
 ## Project Background
