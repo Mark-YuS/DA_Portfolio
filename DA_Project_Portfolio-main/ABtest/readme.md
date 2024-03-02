@@ -1,4 +1,4 @@
-# Empowering User Experience and Improve Conversion Rate - Optimizing Product Recommendations through AB Testing
+# Empowering User Experience - Optimizing Product Recommendations and Improve Conversion rate through AB Testing
 
 
 <p>
