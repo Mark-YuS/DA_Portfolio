@@ -52,8 +52,10 @@
 
 
 <p>
-  <img src="https://www.travelpayouts.com/blog/wp-content/uploads/2018/11/ab-testing.jpg" alt="Image" width="400" height="250">
+  <img src="https://github.com/Mark-YuS/DA_Portfolio/assets/151570035/c635b55c-9cde-4356-a423-4dc3ece77316" alt="Image" width="400" height="250">
 </p>
+
+
 
 
 **Collaborated with Engineering Teams and Delivered Winning A/B Tests**
