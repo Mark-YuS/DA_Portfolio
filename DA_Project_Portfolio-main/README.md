@@ -8,7 +8,7 @@
 
 | Project Detail | Data Link |
 |:---------------:|:---------:|
-| [Yelp Data Analysis](https://github.com/Mark-YuS/DA_Portfolio/tree/main/DA_Project_Portfolio-main/Yelp_Data_Analysis) | [Link](https://drive.google.com/drive/folders/1IjAxEdUHANtt-gs9AuF-hoKSQv8bxK-X?usp=drive_link) |
+| [Yelp Data Analysis](https://github.com/Mark-YuS/DA_Portfolio/tree/main/DA_Project_Portfolio-main/Yelp_Data_Analysis) | [Link](https://drive.google.com/drive/folders/11e0E5QHFZrUKffQwoBoEMwyouB1ZnpCy) |
 | [AB Testing](https://github.com/Mark-YuS/DA_Portfolio/tree/main/DA_Project_Portfolio-main/ABtest) | [Link](https://github.com/Mark-YuS/DA_Portfolio/tree/main/DA_Project_Portfolio-main/ABtest/ABtest_data) |
 | [Cashflow Forecasting](https://github.com/Mark-YuS/DA_Portfolio/tree/main/DA_Project_Portfolio-main/CashFlow_Forecasting) | [Link](https://drive.google.com/drive/folders/1Y0ts5BbmGLXMe9WSRl_d-LI45MWEFa4o?usp=drive_link) |
 | [News RecSys](https://github.com/Mark-YuS/DA_Portfolio/tree/main/DA_Project_Portfolio-main/recommender_system) | [Link](https://drive.google.com/drive/folders/1LrT2WKYZksDkVkp710fpFRZVIwu9PAxf?usp=drive_link) |
