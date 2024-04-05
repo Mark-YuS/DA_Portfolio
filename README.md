@@ -15,7 +15,7 @@
 
 
 
-## Unveiling Business Insights - A Comprehensive Data Analysis of Yelp Dataset ![image](https://github.com/datoujinggzj/DS_Project_Portfolio/assets/99417740/b791ea9e-195e-4107-b665-49d060becf52)
+## Unveiling Business Insights - A Comprehensive Data Analysis of Yelp Dataset
 
 
 <p>
