@@ -19,8 +19,9 @@
 
 
 <p>
-  <img src="https://github.com/datoujinggzj/DS_Project_Portfolio/assets/99417740/08f41980-091c-4534-889e-bd8adbb1cb88" alt="Image" width="400" height="250">
+  <img src="https://github.com/Mark-YuS/DA_Portfolio/assets/151570035/bf460016-3db4-4e2f-aa8c-e9de6cefc040" alt="Image" width="400" height="250">
 </p>
+
 
 
 **Data Integration and MySQL Database Creation**
