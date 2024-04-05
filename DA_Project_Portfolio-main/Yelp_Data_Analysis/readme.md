@@ -23,7 +23,7 @@ Overall, the Yelp dataset is a valuable resource for anyone interested in explor
 
 ## About Dataset
 
-Data Link: https://drive.google.com/drive/folders/1IjAxEdUHANtt-gs9AuF-hoKSQv8bxK-X?usp=drive_link
+Data Link: https://drive.google.com/drive/folders/11e0E5QHFZrUKffQwoBoEMwyouB1ZnpCy
 
 ![image-20230505225633404](https://github.com/datoujinggzj/DS_Project_Portfolio/assets/99417740/51f0736c-5d6b-4f78-b20c-72248215a1de)
 
