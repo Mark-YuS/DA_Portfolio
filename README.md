@@ -11,7 +11,7 @@
 | [Yelp Data Analysis](https://github.com/Mark-YuS/DA_Portfolio/tree/main/DA_Project_Portfolio-main/Yelp_Data_Analysis) | [Link](https://drive.google.com/drive/u/0/folders/11e0E5QHFZrUKffQwoBoEMwyouB1ZnpCy) |
 | [AB Testing](https://github.com/Mark-YuS/DA_Portfolio/tree/main/DA_Project_Portfolio-main/ABtest) | [Link](https://github.com/Mark-YuS/DA_Portfolio/tree/main/DA_Project_Portfolio-main/ABtest/ABtest_data)|
 | [Cashflow Forecasting](https://github.com/datoujinggzj/DS_Project_Portfolio/tree/main/CashFlow_Forecasting) | [Link](https://drive.google.com/drive/folders/1Y0ts5BbmGLXMe9WSRl_d-LI45MWEFa4o?usp=drive_link) |
-| [News RecSys](https://github.com/datoujinggzj/DS_Project_Portfolio/tree/main/recommender_system) | [Link](https://drive.google.com/drive/folders/1LrT2WKYZksDkVkp710fpFRZVIwu9PAxf?usp=drive_link) |
+
 
 
 
@@ -117,37 +117,3 @@
 - Exceeded baseline performance by a substantial margin, resulting in a quantifiable enhancement of 15% in forecasting accuracy, positively influencing the organization's financial strategies.
 - Cultivated a data-driven culture within AFSG, elevating the importance of data science in shaping strategic decisions and driving business success.
 
-## News Intelligence - Unleashing the Potential of User History for Click Prediction
-
-<p>
-  <img src="https://github.com/datoujinggzj/DS_Project_Portfolio/assets/99417740/bd28bb70-a7c4-4083-b946-ff2462d65102" alt="Image" width="400" height="250">
-</p>
-
-
-**Defining Business Requirements and Supervised Learning Transformation**
-
-- Pioneered the identification and clarification of business requirements, crafting indicator calculation logic, and transforming the prediction problem into a supervised learning framework with features and labels.
-
-**Python-Powered Data Mining and In-Depth Analysis**
-
-- Leveraged the power of Python to conduct comprehensive data mining on more than 200,000 news app users, encompassing click environment, click volume, news co-occurrence frequency, article length, and click preferences.
-- Executed rigorous in-depth analysis of the cold start problem, expertly addressing the challenges posed by user interactions and ensuring optimal performance.
-
-**Innovative Recall Strategy Integration**
-
-- Completed a multi-way combination of recall strategies, expertly incorporating item-based collaborative filtering (itemcf), embedding techniques, and YoutubeDNN to enhance click predictions.
-
-**High-Value Feature Engineering**
-
-- Applied advanced feature engineering techniques, expertly combining, enhancing, and selecting features based on user history behavior, resulting in the creation of high-value features.
-
-**Fine-Tuned Ranking Models for Enhanced Predictions**
-
-- Selected and fine-tuned three representative ranking models, including LGB Ranker, LGB Classifier, and DIN (Deep Interest Network), achieving top-notch performance in click prediction.
-- Seamlessly integrated the models using stacking and weighted fusion techniques to maximize prediction accuracy.
-
-**Quantifiable Achievements and Impact**
-
-- Achieved remarkable improvements in click prediction accuracy, resulting in an impressive 20% increase in click-through rates (CTR).
-- Transformed the news recommendation system into a data-driven powerhouse, enabling personalized and engaging content delivery to users.
-- Enhanced user satisfaction and engagement, fostering a loyal user base and positively impacting the platform's user retention metrics.
