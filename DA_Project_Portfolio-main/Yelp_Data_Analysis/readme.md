@@ -6,26 +6,25 @@
 
 ![image](https://github.com/Mark-YuS/DA_Portfolio/assets/151570035/67d38847-34f4-485e-b79f-ad6d0e6a9575)
 
-
-Yelp is an online platform that allows users to search for and browse information about businesses, including their address, phone number, hours of operation, and other details. It also enables users to view reviews and ratings of businesses written by other users, and to write and publish their own reviews and comments. Yelp's review system leverages the power of social networking, encouraging users to share their experiences and opinions about businesses, which helps other users to find better businesses. Yelp was founded in 2004 in the United States and has expanded to other countries including Canada, the United Kingdom, Australia, France, Germany, Italy, and Switzerland, among others.
+Yelp is an online platform that provides users with the ability to search and explore information about businesses such as their address, contact details, and operating hours. Users can also access reviews and ratings left by others, and contribute their own feedback and comments. Leveraging social networking, Yelp encourages its users to share their experiences, thereby assisting others in discovering quality businesses. Founded in 2004 in the United States, Yelp has since broadened its reach to include several other countries, such as Canada, the United Kingdom, Australia, France, Germany, Italy, and Switzerland.
 
 
 
 ## Background
 
-The Yelp dataset is a collection of data related to businesses, reviews, users, and other interactions on the Yelp platform. The dataset includes information from several cities across the United States, covering a variety of business categories and user demographics.
+The Yelp dataset comprises a rich collection of information pertaining to businesses, reviews, users, and various interactions within the Yelp platform. It encompasses data from multiple cities across the United States, spanning various business categories and user demographics.
 
-The purpose of this dataset is to enable researchers, data analysts, and data scientists to explore and analyze the dynamics of the Yelp platform and gain insights into user behavior, business performance, and market trends. With the increasing popularity of online review platforms like Yelp, this dataset provides a valuable resource for understanding the factors that influence customer satisfaction, business success, and platform growth.
+This dataset serves as a tool for researchers, data analysts, and data scientists to study and understand the intricacies of the Yelp platform, offering insights into user behavior, business performance, and evolving market trends. As online review platforms like Yelp grow in popularity, this dataset becomes an essential resource for examining the elements that affect customer satisfaction, business success, and the expansion of the platform.
 
-In addition, the Yelp dataset is a widely used benchmark dataset for evaluating the performance of machine learning algorithms, particularly in the areas of natural language processing, sentiment analysis, and recommendation systems. By providing a large and diverse dataset that reflects real-world interactions and behaviors, the Yelp dataset allows researchers to develop and test new algorithms and models that can be applied to other online platforms and domains.
+Furthermore, the Yelp dataset is extensively utilized as a benchmark for assessing the effectiveness of machine learning algorithms, especially in fields like natural language processing, sentiment analysis, and recommendation systems. It provides a substantial and varied dataset that mirrors real-world interactions, enabling researchers to develop, refine, and validate new algorithms and models applicable across different online platforms and sectors.
 
-Overall, the Yelp dataset is a valuable resource for anyone interested in exploring the dynamics of online review platforms and understanding the factors that influence user behavior, business success, and platform growth.
+In summary, the Yelp dataset is an valuable asset for those keen on delving into the workings of online review platforms and discerning the factors that drive user behavior, business performance, and platform development.
 
 ## About Dataset
 
 Data Link: https://drive.google.com/drive/folders/11e0E5QHFZrUKffQwoBoEMwyouB1ZnpCy
 
-![image-20230505225633404](https://github.com/datoujinggzj/DS_Project_Portfolio/assets/99417740/51f0736c-5d6b-4f78-b20c-72248215a1de)
+![image-20230505225633404](https://drive.google.com/drive/u/0/folders/11e0E5QHFZrUKffQwoBoEMwyouB1ZnpCy)
 
 
 
