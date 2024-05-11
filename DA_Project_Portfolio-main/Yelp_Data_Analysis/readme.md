@@ -4,7 +4,7 @@
 
 ##  What is Yelp?
 
-![image](https://github.com/datoujinggzj/DS_Project_Portfolio/assets/99417740/791fbf72-de61-42f0-9e62-7830cca50542)
+![image](https://github.com/Mark-YuS/DA_Portfolio/assets/151570035/67d38847-34f4-485e-b79f-ad6d0e6a9575)
 
 
 Yelp is an online platform that allows users to search for and browse information about businesses, including their address, phone number, hours of operation, and other details. It also enables users to view reviews and ratings of businesses written by other users, and to write and publish their own reviews and comments. Yelp's review system leverages the power of social networking, encouraging users to share their experiences and opinions about businesses, which helps other users to find better businesses. Yelp was founded in 2004 in the United States and has expanded to other countries including Canada, the United Kingdom, Australia, France, Germany, Italy, and Switzerland, among others.
