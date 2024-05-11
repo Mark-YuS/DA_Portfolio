@@ -22,9 +22,7 @@ In summary, the Yelp dataset is an valuable asset for those keen on delving into
 
 ## About Dataset
 
-Data Link: https://drive.google.com/drive/folders/11e0E5QHFZrUKffQwoBoEMwyouB1ZnpCy
-
-![image-20230505225633404](https://drive.google.com/drive/u/0/folders/11e0E5QHFZrUKffQwoBoEMwyouB1ZnpCy)
+Data Link: [https://drive.google.com/drive/folders/11e0E5QHFZrUKffQwoBoEMwyouB1ZnpCy](https://drive.google.com/drive/u/0/folders/11e0E5QHFZrUKffQwoBoEMwyouB1ZnpCy)
 
 
 
@@ -46,27 +44,38 @@ When we use the Yelp dataset for data analysis, we can analyze the data from the
 
 ### Platform perspective
 
-From the platform's perspective, we can use the Yelp dataset to analyze user behavior and merchant operations, thereby guiding platform operations and marketing strategies. For example, we can analyze popular merchants and user preferences on the Yelp platform to provide more accurate targeting services to merchants and advertising clients. In addition, we can use data to analyze the development of cities to discover new business opportunities and market trends. For example, we can analyze the number and rating of merchants in different cities to understand which cities have more intense market competition and which cities have more promising business opportunities.
+From the perspective of the platform, the Yelp dataset allows for the analysis of user behavior and merchant activities, which can inform the management of platform operations and the development of marketing strategies. For instance,by examining popular merchants and user preferences on Yelp, the platform can offer more precise targeting services to both merchants and advertising partners. Additionally, the data can be used to analyze urban development, unveiling new business opportunities and market trends. For example, by assessing the number and ratings of merchants in various cities, we can identify which cities face stiffer market competition and which are ripe with promising business prospects.
 
 ### User perspective
 
-From the user's perspective, we can use the Yelp dataset to analyze user behavior, taste preferences, and opinions and suggestions to provide better services and experiences for merchants. For example, we can analyze user check-ins and reviews on the Yelp platform to understand the types of merchants and service quality that users prefer. In addition, we can use data to analyze user suggestions and opinions to provide better products and services to merchants. For example, we can analyze user suggestions for different merchants on the Yelp platform to help merchants improve their products or services.
+From the user's perspective, the Yelp dataset can be utilized to delve into user behaviors, taste preferences, and feedback, ultimately enhancing the services and experiences offered to merchants. For instance, by examining user check-ins and reviews on Yelp, insights into the types of merchants and the quality of service users favor can be gained. Moreover, the data can be used to analyze user suggestions and opinions, facilitating the provision of improved products and services to merchants. For example, analyzing feedback for different merchants on Yelp can guide merchants in refining their offerings.
+
 
 ### Business perspective
 
-From the merchant's perspective, we can use the Yelp dataset to analyze merchant reviews, check-ins, and business hours to improve service quality and optimize business models. For example, we can analyze the ratings and reviews of merchants on the Yelp platform to improve their products and services. In addition, we can use data to analyze merchant check-ins and business hours to optimize their business strategies and increase customer traffic. For example, we can analyze customer traffic during different time periods and workdays to help merchants arrange more reasonable working hours and manpower resources.
+From the perspective of restaurants, the Yelp dataset can be utilized to scrutinize merchant reviews, check-ins, and business hours to enhance service quality and refine business models. For instance, by analyzing the ratings and reviews on the Yelp platform, restaurants can make informed improvements to their products and services. Additionally, the data can be employed to optimize merchant strategies and boost customer traffic by examining check-ins and business hours. For example, analyzing customer flow during different times and on various days can assist merchants in scheduling more effective working hours and allocating manpower resources.
 
-In summary, using the Yelp dataset for data analysis can provide insights into the operation of the Yelp platform and user behavior from multiple perspectives, thereby providing better services to the platform and better operational strategies to merchants.
+In summary, leveraging the Yelp dataset for data analysis offers valuable insights into the functioning of the Yelp platform and user behavior from various angles, ultimately improving services for the platform and enhancing operational strategies for merchants.
 
-## Analysis Perspectives
+## Analysis
 
-### Business Types and Locations
+### Distribution of Businesses
+
 
 <p align="center">
-  <img src="https://github.com/datoujinggzj/DS_Project_Portfolio/assets/99417740/6dfa5d47-ffdf-4924-86de-df528b12808b" alt="Image" width="400" height="400">
+  <img src="https://github.com/Mark-YuS/DA_Portfolio/assets/151570035/8e3c9f08-b18f-47ef-ae84-6f212ea2b854" alt="Image" width="400" height="400">
 </p>
 
-We can analyze the number and distribution of businesses in different cities or regions, and understand which types of businesses are most popular and which areas have more businesses. This can help the platform and businesses understand market demand and competition. For example, we can analyze the business category and location information in the Yelp Business dataset, and determine the most popular business types and the most popular business districts in a city or region.
+<p align="center">
+  <img src="https://github.com/Mark-YuS/DA_Portfolio/assets/151570035/e8d7cfd8-2752-4846-9f31-1acca56de1e0" alt="Image">
+</p>
+
+
+<p align="center">
+  <img src="https://github.com/Mark-YuS/DA_Portfolio/assets/151570035/b31efaa5-df41-4ccf-a499-e6c9f936626b" alt="Image">
+</p>
+We can analyze the number and distribution of businesses in different cities or regions, and understand which types of businesses are most popular and which areas have more businesses. This can help the platform and businesses understand market demand and competition. For example, by evaluating the business category and location data in the Yelp Business dataset, we can pinpoint the most favored types of businesses and the busiest business districts within a particular city or region.
+
 
 ### User Reviews and Preferences
 
