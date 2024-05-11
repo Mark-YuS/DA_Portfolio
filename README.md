@@ -3,7 +3,6 @@
 - Unveiling Business Insights - A Comprehensive Data Analysis of Yelp Dataset
 - Empowering User Experience - Optimizing Product Recommendations through AB Testing and UI Enhancements
 - Revolutionizing Cash Flow Forecasts - A Paradigm Shift in Purchase and Redemption Predictions
-- News Intelligence - Unleashing the Potential of User History for Click Prediction
 
 
 | Project Detail | Data Link |
