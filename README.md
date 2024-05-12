@@ -23,18 +23,18 @@
 
 
 
-**Data Integration and MySQL Database Creation**
+**Data Integration via MySQL Database Creation and Complex SQL queries for Data Analysis**
 
-- Orchestrated the consolidation of vast and diverse datasets from 6 independent sources, encompassing information on 1.32 million users, yelping reviews, platform check-ins, and business projections.
-- Expertly transformed the raw data into a structured and scalable MySQL database, ensuring seamless data accessibility and streamlined analysis.
+- Coordinated the integration of extensive datasets from six distinct CSV files, compiling data related to 1.32 million users, Yelp reviews, platform check-ins, and business projections.
+- Skillfully processed and organized the raw data into a structured and scalable MySQL database, enhancing data accessibility and facilitating efficient analysis.
+- Demonstrated proficiency in SQL through the use of CTE and complex conditional logic to perform exploratory data analysis and extract critical insights. Applied sophisticated data manipulation strategies including subqueries and case statements to drive strategic business decisions.
 
 **Sentiment Analysis for Enhanced Business Ratings**
 
 - Leveraged Python to conduct sentiment analysis on a massive corpus of 5.26 million reviews, employing cutting-edge feature vectorization and advanced text mining techniques.
-- Implemented data-driven adjustments to business star ratings based on sentiment analysis results, leading to an impressive 17% lift in rating precision.
 - Enabled businesses to gain a deeper understanding of customer sentiment and make data-backed decisions to improve user experiences.
 
-**Root Cause Analysis and Elite User Retention Enhancement**
+**Strategic Data Analysis for Enhanced Business Outcomes**
 
 - Designed and developed comprehensive root cause reports, meticulously decomposed into three distinct dimensions, to unearth underlying issues affecting elite user retention.
 - Skillfully analyzed the reports to derive actionable insights that addressed the identified problems, resulting in a significant 12% increase in elite user retention.
