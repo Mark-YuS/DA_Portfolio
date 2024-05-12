@@ -34,19 +34,10 @@
 - Leveraged Python to conduct sentiment analysis on a massive corpus of 5.26 million reviews, employing cutting-edge feature vectorization and advanced text mining techniques.
 - Enabled businesses to gain a deeper understanding of customer sentiment and make data-backed decisions to improve user experiences.
 
-**Strategic Data Analysis for Enhanced Business Outcomes**
-
-- Designed and developed comprehensive root cause reports, meticulously decomposed into three distinct dimensions, to unearth underlying issues affecting elite user retention.
-- Skillfully analyzed the reports to derive actionable insights that addressed the identified problems, resulting in a significant 12% increase in elite user retention.
-- Empowered businesses with valuable insights, enabling them to optimize their strategies and cater to the needs of elite users effectively.
-
-**Impactful Insights for Business Growth**
-
-- Contributed to the business's success by providing valuable data-driven recommendations and actionable insights.
-- Demonstrated expertise in data integration, sentiment analysis, and root cause analysis, enabling data-backed decision-making for enhanced business outcomes.
-- Effectively communicated complex technical findings to non-technical stakeholders, fostering a culture of data-driven decision-making across the organization.
-
-
+**Enhancing Business Outcomes through Strategic Data Analysis**
+- Utilized Python to conduct thorough exploratory data analysis, uncovering initial insights and trends that guide deeper investigations into user behavior.
+-  Employed Folium to create interactive heatmaps, visually representing data to better understand geographic trends and user and restaurants distributions.
+-  Analyzed the findings to extract actionable insights, resulting in a comprehensive report that not only outlined strategies for improving elite user retention but also addressed overall business performance improvements, customer engagement enhancements, and operational optimizations, effectively guiding future business strategies and efforts.
 
 ## Improve Conversion rate and Optimize User experience through AB Testing
 
