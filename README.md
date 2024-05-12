@@ -49,22 +49,13 @@
 
 **Collaborated with Engineering Teams and Delivered Winning A/B Tests**
 
-- Collaborated effortlessly with diverse engineering teams, leveraging technical expertise to develop and run high-quality split tests.
-- Applied strict statistical techniques to guarantee the experiments were methodically planned, randomized, and statistically valid, yielding results that could inform decision-making.
+- Applied statistical techniques to guarantee the experiments were methodically planned, randomized, and statistically valid, yielding results that could inform decision-making.
 - Implemented a series of A/B testing experiments to validate the effectiveness of the UI changes on user preferences, leading to make a data-driven decision. 
 
 **Utilized Fine-Tuned Logistic Regression for Launch Probability Assessment**
 
 - Developed and fine-tuned a  Logistic Regression model to assess the probability of successfully launching the UI changes.
-- Leveraged various user-specific and historical engagement factors to make accurate predictions.
 - Delivered in-depth customer insights by interpreting the model results, enabling data-driven decision-making for the product development and marketing teams.
-
-**Concrete Process and Agile Iterations**
-
-- Led the end-to-end UI change implementation process, starting from identifying improvement opportunities through extensive data exploration and user feedback analysis.
-- Collaborated closely with product managers, designers, and engineers to translate the identified opportunities into tangible UI design prototypes.
-- Deployed rapid iterations based on real-time user feedback and data insights, optimizing UI elements to maximize user engagement.
-- Continuously monitored key performance metrics, ensuring successful tracking of product usage rate and user behavior post-implementation.
 
 **Driving Operational Efficiency with Data-Driven Insights**
 
@@ -78,7 +69,6 @@
 <p>
   <img src="https://www.freshbooks.com/wp-content/uploads/2021/09/cash-inflow-vs-outflow.jpg" alt="Image" width="400" height="250">
 </p>
-
 
 
 **Led a High-Performance Team and Transformed Financial Forecasting for Ant Financial Services Group (AFSG)**
