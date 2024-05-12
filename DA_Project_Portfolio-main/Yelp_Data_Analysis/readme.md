@@ -74,91 +74,117 @@ In summary, leveraging the Yelp dataset for data analysis offers valuable insigh
 <p align="center">
   <img src="https://github.com/Mark-YuS/DA_Portfolio/assets/151570035/b31efaa5-df41-4ccf-a499-e6c9f936626b" alt="Image">
 </p>
+
+
 We can analyze the number and distribution of businesses in different cities or regions, and understand which types of businesses are most popular and which areas have more businesses. This can help the platform and businesses understand market demand and competition. For example, by evaluating the business category and location data in the Yelp Business dataset, we can pinpoint the most favored types of businesses and the busiest business districts within a particular city or region.
 
+### User Reviews
 
-### User Reviews and Preferences
+<img width="1118" alt="image" src="https://github.com/Mark-YuS/DA_Portfolio/assets/151570035/102f1ab3-2241-4b81-8e49-f95181d6d416"><br><br>
 
-![image](https://github.com/datoujinggzj/DS_Project_Portfolio/assets/99417740/88c8aefd-108f-43f5-9183-73475534fa1d)
+
+<img width="1113" alt="image" src="https://github.com/Mark-YuS/DA_Portfolio/assets/151570035/90923b61-4bc3-40bb-8c6e-6a7ccbccbe52"><br><br>
+
+
+<img width="1124" alt="image" src="https://github.com/Mark-YuS/DA_Portfolio/assets/151570035/e92f6a81-93c0-4dc8-b91c-900a6536f1bb"><br><br>
 
 
 We can analyze user ratings and reviews of businesses on the Yelp platform, and understand information such as user preferences for business types, service quality, and food taste, which can help businesses better optimize their products and services. For example, we can analyze a business's food taste, service quality, and user feedback through the user reviews and ratings data in the Yelp Review dataset, and help businesses improve or optimize their products and services.
 
+
+### User Activity in Regions
+
+By using Folium library, the interactive map can visualize the distribution user activities various regions. By organizing data by star ratings, the heatmap effectively displays the geographical spread and density of businesses, revealing patterns and trends in consumer feedback. The interactive elements of the map allow users to explore these distributions in real-time, providing valuable insights into market dynamics across different areas. This tool is instrumental for businesses and analysts alike, aiding in the identification of key consumer preferences and potential growth opportunities.
+
+<p align="center">Las Vegas </p>
+
+<img width="1149" alt="image" src="https://github.com/Mark-YuS/DA_Portfolio/assets/151570035/27f7aee6-8f31-424e-bdba-557ce45d4478"><br><br>
+
+
+<p align="center">Phoenix</p>
+
+<img width="1144" alt="image" src="https://github.com/Mark-YuS/DA_Portfolio/assets/151570035/0dbc4bda-b3b1-4fac-bbf4-a28964cbfe47"><br><br>
+
+
+<p align="center">Edinburgh</p>
+<img width="1151" alt="image" src="https://github.com/Mark-YuS/DA_Portfolio/assets/151570035/fb10e144-65ae-4ed7-bb30-d426b95ce50c"><br><br>
+
+<p align="center">Stuttgart</p>
+
+<img width="1147" alt="image" src="https://github.com/Mark-YuS/DA_Portfolio/assets/151570035/cc434690-c983-43fd-89d1-3eb23530fe37"><br><br>
+
+
+
 ### Business Operations and Revenue
 
-We can analyze a business's operating conditions and revenue situation, including information such as the business's business hours, customer flow, revenue, and expenses, which can help businesses better formulate operating strategies and increase revenue. For example, we can analyze the distribution of business traffic and operating hours through the check-in and business information data in the Yelp Checkin and Business datasets, and help businesses better arrange work hours and human resources.
+We can evaluate a business's operational conditions and financial performance by examining details such as business hours, customer traffic, revenue, and expenses. This analysis can aid businesses in developing more effective operational strategies and boosting their revenue. For instance, by analyzing data on customer traffic and business hours from the Yelp Checkin and Business datasets, we can assist businesses in optimizing their work schedules and human resource allocation. This helps in aligning their operations more closely with market demands and customer patterns.
 
 ### User Behaviors and Trends
 
-We can analyze user behavior and trends on the platform, including user reviews of businesses, check-ins, favorites, and likes, which can help businesses better understand user needs and behavior habits. For example, we can analyze user suggestions and preferences for businesses through the user comments and likes data in the Yelp Tip and Review datasets, and help businesses improve or optimize their products and services.
+We can examine user behavior and trends on the platform, such as reviews, check-ins, favorites, and likes, to help businesses gain a deeper understanding of user needs and habits. For example, by analyzing the data on user comments and likes from the Yelp Tip and Review datasets, we can assist businesses in refining or enhancing their products and services based on user suggestions and preferences. This approach enables businesses to better cater to their customers' expectations and improve overall satisfaction.
 
 ### Market Competition and Trends
 
-We can analyze market competition and trends, including information such as the number of businesses, reviews, market share, and trends in different cities. This can help businesses and the platform better understand market development trends and opportunities. For example, we can analyze the number of businesses and review situation in a city or region through the business and review data in the Yelp Business and Review datasets, understand the level of market competition and development trends, and help businesses and the platform better formulate development strategies.
+We can assess market competition and trends by analyzing data such as the number of businesses, reviews, market share, and local trends across different cities. This analysis can aid businesses and the platform in comprehending market development trends and identifying opportunities. For instance, by examining the number of businesses and their review profiles in a specific city or region using the Yelp Business and Review datasets, we can gauge the intensity of market competition and identify emerging trends. This information helps businesses and the platform to devise more informed development strategies.
 
 ### Sentiment Analysis
 
-![image](https://github.com/datoujinggzj/DS_Project_Portfolio/assets/99417740/019929ee-4d06-48c3-bd91-05261aa4116b)
+<img width="1119" alt="image" src="https://github.com/Mark-YuS/DA_Portfolio/assets/151570035/ef789b2f-f6b2-44fb-afed-4b7afb6e9866">
 
+This involves utilizing natural language processing techniques to scrutinize the opinions and emotions contained in user reviews and ratings. Through this analysis, we can detect patterns and trends in how users feel about various businesses and their offerings, aiding these businesses in enhancing their products or services to align with customer expectations.
 
-It involves using natural language processing techniques to analyze the opinions and emotions expressed in user reviews and ratings. By doing so, we can identify patterns and trends in user sentiment towards different businesses and their products or services, and help businesses improve their products or services to meet customer expectations.
+For instance, sentiment analysis can reveal recurring issues or complaints highlighted in user reviews, such as prolonged waiting times, subpar customer service, or inferior food quality. Businesses can then leverage this information to rectify these problems and boost overall customer satisfaction. Additionally, the platform can gain from sentiment analysis by spotting trends in user satisfaction and dissatisfaction across different business sectors, and then use this data to refine its features and services.
 
-For example, we can use sentiment analysis to identify common issues or complaints mentioned in user reviews, such as long wait times, poor customer service, or low quality food. Businesses can then use this information to address these issues and improve their overall customer satisfaction. The platform itself can also benefit from sentiment analysis by identifying trends in user satisfaction and dissatisfaction across different categories of businesses, and use this information to improve the platform's features and services.
+Moreover, sentiment analysis can predict future user behaviors and preferences, enabling businesses and the platform to anticipate market trends and proactively adapt to evolving customer needs.
 
-In addition, sentiment analysis can also be used to predict future user behavior and preferences, which can help businesses and the platform stay ahead of market trends and respond proactively to changing customer needs.
 
 ### Network & Community Detection
 
 <p align="center">
-  <img src="https://github.com/datoujinggzj/DS_Project_Portfolio/assets/99417740/1e0f9c49-286c-49c0-ba40-b460b5b719a4" alt="Image" width="400" height="400">
+  <img src="https://github.com/Mark-YuS/DA_Portfolio/assets/151570035/8d96887f-37ff-4688-8e32-6429c9cac57d" alt="Image"><br><br>
 </p>
 
-It involves using network analysis techniques to identify groups of businesses or users that are closely related to each other based on their interactions on the platform. By doing so, we can identify communities of businesses or users that share similar interests, preferences, or behaviors, and use this information to better understand the dynamics of the Yelp platform.
+<p align="center">
+  <img src="https://github.com/Mark-YuS/DA_Portfolio/assets/151570035/f0036373-b18e-4fab-beec-b9cc0e7f3cb9" alt="Image"><br><br>
+</p>
 
-For example, we can use community detection to identify groups of businesses that are competing with each other in the same market segment or location. By analyzing the interactions and relationships between these businesses, we can better understand their competitive landscape and help them develop more effective marketing strategies.
+<p align="center">
+  <img src="https://github.com/Mark-YuS/DA_Portfolio/assets/151570035/c50790ce-832b-42af-b6b6-5f6eb2508803" alt="Image"><br><br>
+</p>
 
-Similarly, we can use community detection to identify groups of users that are interacting with each other on the platform, such as users who frequently review or recommend the same types of businesses. By analyzing these user communities, we can better understand their preferences and behaviors, and use this information to improve the platform's recommendation algorithms and personalized services.
+<p align="center">
+  <img src="https://github.com/Mark-YuS/DA_Portfolio/assets/151570035/c50790ce-832b-42af-b6b6-5f6eb2508803" alt="Image"><br><br>
+</p>
 
-Overall, community detection is a powerful tool for understanding the complex network of relationships between businesses and users on the Yelp platform, and can help businesses and the platform better understand their customers and improve their services.
 
-## Challenges & Pain Points
+<p align="center">
+  <img src="https://github.com/Mark-YuS/DA_Portfolio/assets/151570035/4533edb5-5185-499e-8d2d-0a2a9368311e" alt="Image"><br><br>
+</p>
+
+
+This approach utilizes network analysis techniques to segement groups of businesses or users that are interconnected based on their interactions on the platform. By identifying these communities, we can uncover groups of businesses or users with similar interests, preferences, or behaviors, which helps in understanding the dynamics of the Yelp platform more deeply.
+
+For example, by employing community detection, we can pinpoint clusters of businesses that compete within the same market segment or geographical area. By studying the interactions and relationships among these businesses, we gain insights into their competitive environment, aiding them in crafting more effective marketing strategies.
+
+Similarly, community detection can be used to identify groups of users who interact frequently on the platform, such as those who often review or recommend similar types of businesses. Analyzing these communities helps us better understand user preferences and behaviors, enhancing the platform’s recommendation algorithms and personalized offerings.
+
+Overall, community detection serves as a valuable tool in mapping the intricate network of relationships between businesses and users on the Yelp platform, enabling both businesses and the platform to better comprehend their customers and refine their services.
+
+## Challenges
 
 ### Data volume and complexity
 
-The Yelp dataset contains millions of rows of data, which can make it challenging to extract meaningful insights and patterns. One solution to this challenge is to use sampling techniques to reduce the size of the dataset while still maintaining the integrity of the analysis. For example, a data analyst may choose to focus on a subset of businesses or reviews that are most relevant to the research question at hand. However, the drawback of this solution is that it may overlook important patterns and trends that are only visible in the full dataset.
+The Yelp dataset includes millions of data entries, presenting challenges in extracting meaningful insights and discernible patterns due to its vast size. One strategy to address this challenge is through the use of sampling techniques, which help to manage the dataset's size while aiming to preserve the validity of the analysis. For instance, a data analyst might opt to concentrate on a specific subset of businesses or reviews that are directly pertinent to the research question being investigated. Nevertheless, this approach has its limitations, as it can potentially miss significant patterns and trends that are only observable when analyzing the entire dataset.
 
 ### Data quality
 
-The Yelp dataset is user-generated, which means that the quality of the data can vary widely. One solution to this challenge is to use data cleaning and preprocessing techniques to ensure that the data is accurate and reliable. For example, a data analyst may remove duplicates, correct misspellings, and standardize formats to ensure consistency. However, the drawback of this solution is that it can be time-consuming and may require manual intervention to correct errors that cannot be easily automated.
+The Yelp dataset user generated, resulting in varying data quality. To address this, data cleaning and preprocessing techniques are employed to enhance the data's accuracy and reliability. For instance, a data analyst might eliminate duplicate entries, rectify spelling errors, and standardize data formats to ensure uniformity across the dataset. However, this process has its disadvantages; it can be labor-intensive and might necessitate manual efforts to resolve errors that are not readily amendable through automation.
 
-### Bias
-
-The Yelp dataset may be subject to bias and manipulation, which can make it difficult to draw accurate conclusions. One solution to this challenge is to use statistical techniques to account for bias and adjust for confounding variables. For example, a data analyst may use regression analysis to control for factors that may be influencing the outcome of interest, such as the number of reviews or the location of the business. However, the drawback of this solution is that it may not fully account for all sources of bias, and may require extensive data exploration to identify and address potential confounders.
 
 ### Interpretation and communication
 
-Before performing data analysis, a comprehensive understanding of Yelp's platform and the restaurant industry is required to better understand the data and develop appropriate analysis plans. For example, understanding user and merchant behavior and feedback on Yelp's platform, as well as the characteristics and business models of different types of restaurants, is necessary to perform an insightful analysis.
+Before diving into data analysis, a thorough understanding of Yelp's platform and the restaurant industry is essential to properly interpret the data and formulate effective analysis strategies. For example, it's crucial to grasp both user and merchant behaviors on Yelp, along with the distinct characteristics and business models of various restaurant types, to carry out meaningful analysis.
 
-Data analysis is only valuable if the results are interpreted correctly and communicated effectively to stakeholders. One solution to this challenge is to use data visualization and storytelling techniques to convey the key insights and findings in a compelling and accessible way. For example, a data analyst may use interactive charts and graphs to highlight key trends and patterns, or use narrative techniques to explain the significance of the results in plain language. However, the drawback of this solution is that it may require specialized skills and expertise in data visualization and communication, which may not be available to all data analysts.
+Data analysis becomes truly valuable when its results are accurately interpreted and effectively communicated to stakeholders. To address this, employing data visualization and storytelling techniques can be particularly effective in presenting key insights in a clear and engaging manner. For instance, a data analyst might utilize interactive charts and graphs to underscore major trends, or apply narrative methods to clarify the results' implications in simple terms. However, this approach may require specific competencies in data visualization and communication, skills that not all data analysts may possess.
 
-## Gain
 
-### Data analysis skills
-
-In the Yelp data analysis project, you need to clean, transform, aggregate and analyze large-scale and complex datasets, such as data type conversion, missing value handling, outlier detection and removal, data standardization, and group aggregation. At the same time, you also need to use different modeling and analysis methods, such as regression analysis, classification analysis, clustering analysis, and time-series analysis, to interpret the data and extract valuable information based on the analysis purpose.
-
-### Business analysis skills
-
-In the Yelp data analysis project, you need to analyze the data from different perspectives, such as the platform, users, and merchants, to understand the operational status of the Yelp platform. For example, you can analyze user reviews for different types of restaurants to understand the popularity of different types of restaurants on Yelp; you can also analyze merchant feedback to understand their satisfaction with Yelp's services and use their feedback to improve the platform.
-
-### Programming skills
-
-In the Yelp data analysis project, you need to use programming languages to process and analyze data. For example, you can use Python to write data cleaning and analysis scripts, use SQL to perform data querying and aggregation analysis, and use R for statistical analysis and data visualization.
-
-### Visualization skills
-
-In the Yelp data analysis project, you need to use visualization tools to display the analysis results to non-technical stakeholders. For example, you can use tools such as Tableau, Power BI to perform visualization analysis, and create charts such as bar charts, scatterplots, line charts, and heatmaps to show the results of Yelp data analysis.
-
-### Teamwork skills
-
-In the Yelp data analysis project, you need to collaborate with team members to develop analysis plans and interpret the analysis results. For example, you can work with team members to discuss the analysis purpose and research questions, design analysis plans and experiment workflows, and collaborate on data cleaning, analysis, and visualization tasks.
