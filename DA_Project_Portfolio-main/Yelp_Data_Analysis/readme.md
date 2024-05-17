@@ -6,7 +6,7 @@
 
 ![image](https://github.com/Mark-YuS/DA_Portfolio/assets/151570035/67d38847-34f4-485e-b79f-ad6d0e6a9575)
 
-Yelp is an online platform that provides users with the ability to search and explore information about businesses such as their address, contact details, and operating hours. Users can also access reviews and ratings left by others, and contribute their own feedback and comments. Leveraging social networking, Yelp encourages its users to share their experiences, thereby assisting others in discovering quality businesses. Founded in 2004 in the United States, Yelp has since broadened its reach to include several other countries, such as Canada, the United Kingdom, Australia, France, Germany, Italy, and Switzerland.
+> Yelp is an online platform that provides users with the ability to search and explore information about businesses such as their address, contact details, and operating hours. Users can also access reviews and ratings left by others, and contribute their own feedback and comments. Leveraging social networking, Yelp encourages its users to share their experiences, thereby assisting others in discovering quality businesses. Founded in 2004 in the United States, Yelp has since broadened its reach to include several other countries, such as Canada, the United Kingdom, Australia, France, Germany, Italy, and Switzerland.
 
 
 
