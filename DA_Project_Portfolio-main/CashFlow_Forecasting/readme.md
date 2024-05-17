@@ -1,8 +1,10 @@
-# Revolutionizing Cash Flow Forecasts - A Paradigm Shift in Purchase and Redemption Predictions
+# Cash Flow Forecasts - Purchase and Redemption Predictions
 
 <p align="center">
-  <img src="https://www.freshbooks.com/wp-content/uploads/2021/09/cash-inflow-vs-outflow.jpg" alt="Image" width="700" height="400">
+  <img src="https://github.com/Mark-YuS/DA_Portfolio/assets/151570035/e673825d-01df-483e-bab2-639e1576e564" alt="Image" width="700" height="400">
 </p>
+
+
 
 ## Background
 
