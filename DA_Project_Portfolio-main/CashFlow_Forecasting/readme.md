@@ -219,181 +219,137 @@ In view of the prominent cyclical patterns exhibited by the time series data of 
 
 **Example Scenario:** Suppose we have the following data to predict the daily footfall for the fourth week:
 
-| Monday | Tuesday | Wednesday | Thursday | Friday | Saturday | Sunday | Weekly Average |
-| ------ | ------- | --------- | -------- | ------ | -------- | ------ | -------------- |
-| Week 1 | 20      | 10        | 70       | 50     | 250      | 200    | 100            |
-| Week 2 | 26      | 18        | 66       | 50     | 180      | 140    | 80             |
-| Week 3 | 15      | 8         | 67       | 60     | 270      | 160    | 120            |
+|       | Monday | Tuesday | Wednesday | Thursday | Friday | Saturday | Sunday | Weekly Average |
+| ----- | ------ | ------- | --------- | -------- | ------ | -------- | ------ | -------------- |
+| Week 1 | 20     | 10      | 70        | 50       | 250    | 200      | 100    | 100            |
+| Week 2 | 26     | 18      | 66        | 50       | 180    | 140      | 80     | 80             |
+| Week 3 | 15     | 8       | 67        | 60       | 270    | 160      | 120    | 100            |
+
 
 **Steps:**
-
 1. **Calculating Proportional Factors:** Divide each day's count by the weekly average to obtain proportions.
 2. **Calculating Median:** Calculate the median for each day across weeks.
+
+|       | Monday | Tuesday | Wednesday | Thursday | Friday | Saturday | Sunday |
+| ----- | ------ | ------- | --------- | -------- | ------ | -------- | ------ |
+| Week 1 | 0.2    | 0.1     | 0.7       | 0.5      | 2.5    | 2        | 1      |
+| Week 2 | 0.325  | 0.225   | 0.825     | 0.625    | 2.25   | 1.75     | 1      |
+| Week 3 | 0.15   | 0.08    | 0.67      | 0.6      | 2.7    | 1.6      | 1.2    |
+| Median | 0.2    | 0.1     | 0.7       | 0.6      | 2.5    | 1.75     | 1      |
+
 3. **Final Cyclical Factors:** The resulting median values serve as a robust set of cyclical factors.
 
 **Forecasting:** To make predictions, simply multiply the cyclical factors with a base value. For instance, if the average footfall for the last week is 100, predictions for the next week can be calculated:
 
-| Monday                 | Tuesday | Wednesday | Thursday | Friday | Saturday |
-| ---------------------- | ------- | --------- | -------- | ------ | -------- |
-| Median                 | 20      | 10        | 70       | 60     | 250      |
-| Predictions (base=100) | 20      | 10        | 70       | 60     | 250      |
+|                 | Monday | Tuesday | Wednesday | Thursday | Friday | Saturday | Sunday |
+| --------------- | ------ | ------- | --------- | -------- | ------ | -------- | ------ |
+| Median          | 0.2    | 0.1     | 0.7       | 0.6      | 2.5    | 1.75     | 1      |
+| Prediction (base=100) | 20     | 10      | 70        | 60       | 250    | 175      | 100    |
 
-**Optimization:** While the median provides robust cyclical factors, other factors can be considered for optimization. One approach is to compute both the mean and median, and then blend them with proportions determined by test performance. Base optimization can involve considering a subset of recent days' averages (excluding cyclic effects) for better accuracy.
+**Optimization:** While the median offers reliable cyclical factors, there is potential for further optimization by incorporating additional factors. An effective method could involve calculating both the mean and median, and then combining them in proportions that are optimized based on test results. For more precise base optimization, one might consider using an average from a select number of recent days (excluding cyclical effects).
 
 **Core Codes:**
 
 ```python
-# Import necessary libraries
-import pandas as pd  # Import pandas library for data processing
-import numpy as np   # Import numpy library for numerical calculations
-import datetime      # Import datetime library for date and time operations
-
-# Define the method to generate base for time series forecast
-def generate_base(df: pd.DataFrame, month_index: int) -> pd.DataFrame:
-    # Select data for a fixed time period
-    total_balance = df.copy()  # Copy the input DataFrame to avoid modifying the original data
-    total_balance = total_balance[['date', 'total_purchase_amt', 'total_redeem_amt']]  # Select specific columns
-    total_balance = total_balance[(total_balance['date'] >= pd.to_datetime('2014/3/1')) & (total_balance['date'] < pd.to_datetime('2014/{}/1'.format(month_index)))]  # Filter data for the specific time period
+def generate_base(df:pd.DataFrame, month_index:int) -> pd.DataFrame:
+    # Chose the time range
+    total_balance=df.copy()
+    total_balance = total_balance[['date', 'total_purchase_amt', 'total_redeem_amt']]
+    total_balance = total_balance[(total_balance['date'] >= pd.to_datetime('2014/3/1')) & (total_balance['date'] < pd.to_datetime('2014/{}/1'.format(month_index)))]
     
-    # Add timestamp information
-    total_balance['weekday'] = total_balance['date'].dt.weekday  # Add weekday information
-    total_balance['day'] = total_balance['date'].dt.day          # Add day information
-    total_balance['week'] = total_balance['date'].dt.week        # Add week information
-    total_balance['month'] = total_balance['date'].dt.month      # Add month information
+    # Add timestamp
+    total_balance['weekday'] = total_balance['date'].dt.weekday  
+    total_balance['day'] = total_balance['date'].dt.day          
+    total_balance['week'] = total_balance['date'].dt.week        
+    total_balance['month'] = total_balance['date'].dt.month 
     
-    # Calculate next-day factors
-    mean_of_each_weekday = total_balance[['weekday'] + ['total_purchase_amt', 'total_redeem_amt']].groupby('weekday', as_index=False).mean()  # Calculate mean purchase and redeem amounts for each weekday
+    # Calculate the Next-Day Factor
+    mean_of_each_weekday = total_balance[['weekday', 'total_purchase_amt', 'total_redeem_amt']].groupby('weekday', as_index=False).mean()
     for name in ['total_purchase_amt', 'total_redeem_amt']:
-        mean_of_each_weekday = mean_of_each_weekday.rename(columns={name: name+'_weekdaymean'})  # Add suffix to differentiate next-day factors
-    mean_of_each_weekday['total_purchase_amt_weekdaymean'] /= np.mean(total_balance['total_purchase_amt'])  # Calculate next-day factor for purchase amount
-    mean_of_each_weekday['total_redeem_amt_weekdaymean'] /= np.mean(total_balance['total_redeem_amt'])    # Calculate next-day factor for redeem amount
+        mean_of_each_weekday = mean_of_each_weekday.rename(columns={name: name+'_next_day_factor'})
+    mean_of_each_weekday['total_purchase_amt_next_day_factor'] /= np.mean(total_balance['total_purchase_amt'])
+    mean_of_each_weekday['total_redeem_amt_next_day_factor'] /= np.mean(total_balance['total_redeem_amt'])
     
-    # Merge next-day factors into the original dataset
-    total_balance = pd.merge(total_balance, mean_of_each_weekday, on='weekday', how='left')  # Merge next-day factors into the original dataset
+    # Merge 'mean_of_each_weekday' with 'total_balance'ArithmeticError
+    total_balance = pd.merge(total_balance, mean_of_each_weekday, on='weekday', how='left')
     
-    # Calculate frequency of next-days appearing on (1~31) days
-    weekday_count = total_balance[['day', 'weekday', 'date']].groupby(['day', 'weekday'], as_index=False).count()  # Count occurrences of each day on different weekdays
-    weekday_count = pd.merge(weekday_count, mean_of_each_weekday, on='weekday')  # Merge the results with next-day factors
+    # Count the frequency of day occuring on dates from 1st to 31st
+    weekday_count = total_balance[['day', 'weekday', 'date']].groupby(['day', 'weekday'], as_index=False).count()
+    weekday_count = pd.merge(weekday_count, mean_of_each_weekday, on='weekday')
     
-    # Weight next-day factors based on frequency to obtain day factors
-    weekday_count['total_purchase_amt_weekdaymean'] *= weekday_count['date'] / len(np.unique(total_balance['month']))  # Calculate weighted day factors for purchase amount
-    weekday_count['total_redeem_amt_weekdaymean'] *= weekday_count['date'] / len(np.unique(total_balance['month']))    # Calculate weighted day factors for redeem amount
-    day_rate = weekday_count.drop(['weekday', 'date'], axis=1).groupby('day', as_index=False).sum()  # Calculate the sum of weighted factors for each day
+    # Weight the next-day factor based on frequency to obtain the Date factor
+    weekday_count['total_purchase_amt_next_day_factor'] *= weekday_count['date'] / len(np.unique(total_balance['month']))  # Calculate the date factor for purchase amounts by weighting according to frequency
+    weekday_count['total_redeem_amt_next_day_factor'] *= weekday_count['date'] / len(np.unique(total_balance['month']))    # Calculate the date factor for redemption amounts by weighting according to frequency
+    day_rate = weekday_count.drop(['weekday', 'date'], axis=1).groupby('day', as_index=False).sum()  
     
-    # Obtain base by subtracting the date residuals from the mean of all dates in the training set
-    day_mean = total_balance[['day'] + ['total_purchase_amt', 'total_redeem_amt']].groupby('day', as_index=False).mean()  # Calculate mean purchase and redeem amounts for each day
-    day_pre = pd.merge(day_mean, day_rate, on='day', how='left')  # Merge the weighted factors with the mean for each day
-    day_pre['total_purchase_amt'] /= day_pre['total_purchase_amt_weekdaymean']  # Adjust purchase amount by purchase next-day factor
-    day_pre['total_redeem_amt'] /= day_pre['total_redeem_amt_weekdaymean']        # Adjust redeem amount by redeem next-day factor
+    day_rate = day_rate.rename(columns={
+    'total_purchase_amt_next_day_factor': 'total_purchase_amt_date_factor',
+    'total_redeem_amt_next_day_factor': 'total_redeem_amt_date_factor'})
     
-    # Generate test set data
-    for index, row in day_pre.iterrows():
+    
+    # Subtract the date residuals from the average of all date to obtain the base
+    day_mean = total_balance[['day'] + ['total_purchase_amt', 'total_redeem_amt']].groupby('day', as_index=False).mean() 
+    day_base = pd.merge(day_mean, day_rate, on='day', how='left')
+    day_base['total_purchase_amt'] /= day_base['total_purchase_amt_date_factor'] # Divide the purchase amount by the next-day purchase factor
+    day_base['total_redeem_amt'] /= day_base['total_redeem_amt_date_factor'] 
+    
+    # Generate test set
+    for index, row in day_base.iterrows():
         if month_index in (2, 4, 6, 9) and row['day'] == 31:
             break
-        day_pre.loc[index, 'date'] = datetime.datetime(2014, month_index, int(row['day']), 0, 0, 0)  # Generate test set date based on month and day
+        day_base.loc[index, 'date'] = datetime.datetime(2014, month_index, int(row['day']), 0, 0, 0)
+        
+    # Obtain the final forecast results based on the base and the date factors
+    day_base['weekday'] = day_base['date'].dt.weekday 
+    day_base = day_base[['date', 'weekday'] + ['total_purchase_amt', 'total_redeem_amt']]  
+    day_base = pd.merge(day_base, mean_of_each_weekday, on='weekday') 
+    day_base['total_purchase_amt'] *= day_base['total_purchase_amt_next_day_factor'] 
+    day_base['total_redeem_amt'] *= day_base['total_redeem_amt_next_day_factor']      
     
-    # Generate final forecast by multiplying base with next-day factors
-    day_pre['weekday'] = day_pre['date'].dt.weekday  # Add weekday information
-    day_pre = day_pre[['date', 'weekday'] + ['total_purchase_amt', 'total_redeem_amt']]  # Select necessary columns
-    day_pre = pd.merge(day_pre, mean_of_each_weekday, on='weekday')  # Merge next-day factors
-    day_pre['total_purchase_amt'] *= day_pre['total_purchase_amt_weekdaymean']  # Adjust purchase amount based on purchase next-day factor
-    day_pre['total_redeem_amt'] *= day_pre['total_redeem_amt_weekdaymean']        # Adjust redeem amount based on redeem next-day factor
-    
-    day_pre = day_pre.sort_values('date')[['date'] + ['total_purchase_amt', 'total_redeem_amt']]  # Sort by date and select necessary columns
-    return day_pre  # Return the generated time series forecast results DataFrame
+    day_base = day_base.sort_values('date')[['date'] + ['total_purchase_amt', 'total_redeem_amt']]
+    return day_base
 ```
 
-### 3. Feature Engineering
 
-**Static Feature Extraction Based on Date**
+### 3. Model Development & Comparison
 
-These "is" features capture different characteristics and conditions related to the dates, weekdays, and months in the dataset. 
+**Time Series Decomposition**
 
-The key "is" features extracted include:
+Before delving into model construction, we initiated our analysis by decomposing the time series data. This crucial step allowed us to isolate and understand the underlying patterns, such as trend, seasonality, and residual components. By breaking down the time series, we could better prepare the data, enhancing the subsequent modeling process.
 
-- `is_weekend`: Indicates whether the day falls on a weekend (Saturday or Sunday).
-- `is_holiday`: Indicates whether the day is a holiday.
-- `is_firstday_of_holiday`: Indicates whether the day is the first day of a holiday period.
-- `is_lastday_of_holiday`: Indicates whether the day is the last day of a holiday period.
-- `is_firstday_of_work`: Indicates whether the day is the first workday after a holiday period.
-- `is_work`: Indicates whether it's a workday (neither a holiday nor a weekend).
-- `is_gonna_work_tomorrow`: Indicates whether the next day is a workday.
-- `is_worked_yestday`: Indicates whether the previous day was a workday.
-- `is_lastday_of_workday`: Indicates whether the day is the last workday before a holiday.
-- `is_work_on_sunday`: Indicates whether it's a Sunday that requires working.
-- `is_firstday_of_month`: Indicates whether the day is the first day of a month.
-- `is_secday_of_month`: Indicates whether the day is the second day of a month.
-- `is_premonth`, `is_midmonth`, `is_tailmonth`: Indicate whether the day belongs to the early, mid, or late period of a month, respectively.
-- `is_first_week`, `is_second_week`, `is_third_week`, `is_fourth_week`: Indicate whether the week belongs to the first, second, third, or fourth week of the month, respectively.
+![image](https://github.com/Mark-YuS/DA_Portfolio/assets/151570035/bf0cfd97-9466-48f5-bdcf-afefc705dff6)
 
-<img src="https://ice.frostsky.com/2023/08/19/5b8b7f979b2bae65fd5c44c1f10016cd.png" alt="5b8b7f979b2bae65fd5c44c1f10016cd.png" border="0">
+![image](https://github.com/Mark-YuS/DA_Portfolio/assets/151570035/1b9d60c5-552c-4297-b9c3-5950fefbb027)
 
-<img src="https://ice.frostsky.com/2023/08/19/8d90bcea2e91e43a4f45bc0ef8dfc28b.png" alt="8d90bcea2e91e43a4f45bc0ef8dfc28b.png" border="0">
+**ARIMA Model**
 
-**Distance-based Features Extraction**
+After preparing our data through decomposition, we focused on developing the ARIMA (Autoregressive Integrated Moving Average) model. To optimize the performance of the ARIMA model, we employed a grid search technique. This approach systematically tested a range of parameters to identify the most effective combination, thereby ensuring the robustness and accuracy of the model in forecasting.
 
-These features capture various temporal distances between data points and certain reference points. 
+![image](https://github.com/Mark-YuS/DA_Portfolio/assets/151570035/07245be0-81ee-4c40-955b-9d7fbc6d838e)
 
-- `dis_to_nowork` and `dis_from_nowork`: Calculate the distance to the next non-working day and the distance from the last non-working day for each data point.
-- `dis_to_work` and `dis_from_work`: Calculate the distance to the next working day and the distance from the last working day for each data point.
-- `dis_to_holiday` and `dis_from_holiday`: Calculate the distance to the next holiday and the distance from the last holiday for each data point.
-- `dis_to_holiendday` and `dis_from_holiendday`: Calculate the distance to the next last day of holiday and the distance from the last last day of holiday for each data point.
-- `dis_from_startofmonth`: Calculate the distance from the start of the month for each data point.
-- `dis_from_middleofmonth`: Calculate the distance from the middle of the month (15th day) for each data point.
-- `dis_from_middleofweek`: Calculate the distance from the middle of the week (Wednesday, represented by 3) for each data point.
-- `dis_from_endofweek`: Calculate the distance from the end of the week (Sunday, represented by 6) for each data point.
-
-we aim to enhance the dataset with features that capture temporal distances to various reference points, providing additional context and potentially useful insights for analysis and modeling.
-
-<img src="https://ice.frostsky.com/2023/08/19/4a020d277668d41eb1392e3b1632390b.png" alt="4a020d277668d41eb1392e3b1632390b.png" border="0">
-
-<img src="https://ice.frostsky.com/2023/08/19/017de87ec8dd269f5913c38143e0f7f4.png" alt="017de87ec8dd269f5913c38143e0f7f4.png" border="0">
-
-**Peak-related Features Extraction**
-
-<img src="https://ice.frostsky.com/2023/08/19/b610645440d57e55ffe92da6aae6a9bf.png" alt="b610645440d57e55ffe92da6aae6a9bf.png" border="0">
-
-**Cycle-related Features Extraction**
-
-We calculate purchase and redemption rates for different time intervals (weekdays and days of the month) within a given month. Also, we calculate average rates for each weekday and then calculate weighted rates based on the occurrence count of each weekday for each day of the month. This process helps uncover patterns in user purchase and redemption behaviors over specific time intervals within a month.
-
-**Dynamic Behavior Features Extraction**
-
-We aim to extract dynamic features related to purchase behavior over different time intervals within a month. It calculates various statistical measures (median, mean, min, max, standard deviation, skewness) of purchase amounts for each weekday leading up to a specific date in the dataset. These statistics are computed from the data starting on March 31, 2014. 
-
-**Feature Selection**
-
-We remove features that are not effective in splitting the dataset.
-
-<img src="https://ice.frostsky.com/2023/08/19/5d82c469e0cbf7c618e62377df748ada.png" alt="5d82c469e0cbf7c618e62377df748ada.png" border="0">
-
-We eliminated features that are highly correlated with each other. In other words, we remove multicollinear features by combining them and then checking the correlation between the combined feature and the original features. 
-
-**Winning Features Selection**
-
-![image](https://github.com/datoujinggzj/DS_Project_Portfolio/assets/99417740/c351acc8-1f84-4b97-97a4-953c1791455d)
+![image](https://github.com/Mark-YuS/DA_Portfolio/assets/151570035/71fd4978-073f-44f1-b6ce-7bb68501de8f)
 
 
-<p align="center">
-  <img src="https://github.com/datoujinggzj/DS_Project_Portfolio/assets/99417740/f0af7498-151d-4e32-8e2b-64afc4b6afdf" alt="Image" width="400" height="200">
-</p>
+**Univariate Multi-step LSTM Model**
+
+Parallel to the ARIMA model, we developed an LSTM (Long Short-Term Memory) model. LSTMs are well-suited for time series forecasting due to their ability to remember long-term dependencies. Similar to our approach with the ARIMA model, we applied grid search to fine-tune the parameters of the LSTM model. This optimization was key to enhancing the model's performance and achieving reliable predictive results.
+
+![image](https://github.com/Mark-YuS/DA_Portfolio/assets/151570035/da22fd3a-4b65-42d9-bef0-5d25f4feae1d)
+
+![image](https://github.com/Mark-YuS/DA_Portfolio/assets/151570035/d0bbcfc2-df32-49c8-86c4-c86fbf189f4c)
 
 
-### 4. Model Development & Comparison
-
-Developed a diverse set of over 10 systematic forecasting models, including univariate and multivariate approaches, that delivered unparalleled predictive insights into future cash flows.
-
-Utilized innovative techniques, such as weighted averaging of purchase and redemption errors, leading to the identification of the best-performing model—LSTM—exhibiting an impressive uplift in predictive accuracy.
-
-![image](https://github.com/datoujinggzj/DS_Project_Portfolio/assets/99417740/bdaebde3-8af0-4c43-a9b1-05ee6a01887d)
+**Comparative Analysis**
+Both the ARIMA and LSTM models were then compared to assess their effectiveness in forecasting. The comparison was based on several performance metrics derived from the predictions against actual data, allowing us to evaluate each model's strengths and weaknesses comprehensively. Through this analytical comparison, we could make informed decisions on which model best suits our needs for accurate and reliable forecasting.
 
 
-<p align="center">
-  <img src="https://ice.frostsky.com/2023/08/19/ebc04d85bdb7e8fb8da494e39a6c9b9d.png" alt="Image" width="600" height="310">
-</p>
+### 4. Further Improvement for more accurate predictions
 
+**Feature Engineering**
+A pivotal area for future enhancement is advanced feature engineering. By further refining and expanding the selection of features used in our models, we can significantly improve the predictive accuracy. The goal will be to identify and incorporate those features that have the most substantial impact on the forecasts. This may involve more detailed analysis of existing data elements, or the integration of new data types that provide additional context or predictive value.
 
-<p align="center">
-  <img src="https://github.com/datoujinggzj/DS_Project_Portfolio/assets/99417740/ff60b0cf-40bf-46bb-a821-f570545e002d" alt="Image" width="600" height="310">
-</p>
+**Incorporating Multivariate LSTM Models**
+Expanding our model architecture to include multivariate LSTM models marks a significant step forward in our forecasting capabilities. Unlike univariate LSTMs that process a single data sequence, multivariate LSTMs can handle multiple input features simultaneously. This capability allows for a more comprehensive analysis of the data, as the interactions between different variables are considered. For example, alongside historical transaction amounts, factors like seasonal trends, economic indicators, or user behavior metrics could be integrated, providing a richer, more complex dataset for the model to learn from.
 
+**Continuous Model Optimization**
+Continuous optimization of our models will be essential as new data becomes available and as market conditions evolve. This will involve regular retraining sessions, updating model parameters, and possibly incorporating newer algorithms or techniques that may emerge in the field. Keeping our models at the cutting edge will ensure that they remain effective and relevant in providing accurate forecasts.
