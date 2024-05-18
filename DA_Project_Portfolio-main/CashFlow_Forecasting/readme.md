@@ -142,56 +142,68 @@ where:
 
 - Time Series Analysis and Visualization
 
-![image](https://github.com/datoujinggzj/DS_Project_Portfolio/assets/99417740/bd3aaba0-135c-475a-ba3b-c0681e29400f)
+![image](https://github.com/Mark-YuS/DA_Portfolio/assets/151570035/cb21fcce-77ee-470d-9d87-a697ada15f0a)
+
+
+
 
 
 - Difference in Purchase and Redemption Total Amounts from Monday to Sunday
 
-![image](https://github.com/datoujinggzj/DS_Project_Portfolio/assets/99417740/a66e9deb-b701-44c5-a5a7-fbd51769e5fb)
+![image](https://github.com/Mark-YuS/DA_Portfolio/assets/151570035/19d4b79d-399f-49d1-876f-1c1beab0d4f3)
+
+
 
 
 - Month Feature Analysis
 
-![image](https://github.com/datoujinggzj/DS_Project_Portfolio/assets/99417740/d991c6ba-78e7-4f0e-abfc-6d296969d241)
+![image](https://github.com/Mark-YuS/DA_Portfolio/assets/151570035/3ce95ddb-600e-41a7-80e5-f178c31f95a7)
+
+![image](https://github.com/Mark-YuS/DA_Portfolio/assets/151570035/e7e64305-c252-4467-8a4c-d6d5f1911f8f)
+
+
 
 
 - Date Feature Analysis
 
-![image](https://github.com/datoujinggzj/DS_Project_Portfolio/assets/99417740/31d287e2-0b14-4e17-8114-98201596aa96)
+![image](https://github.com/Mark-YuS/DA_Portfolio/assets/151570035/39e6ea92-6b9e-4367-b917-2abb9bfffe53)
+
 
 
 - Holiday Analysis
 
-![image](https://github.com/datoujinggzj/DS_Project_Portfolio/assets/99417740/2d5e37a9-8404-4afd-92f4-469ceb44dbe1)
+![image](https://github.com/Mark-YuS/DA_Portfolio/assets/151570035/13afd35b-2d92-4f80-ad7a-9c30d94ea3c8)
 
+![image](https://github.com/Mark-YuS/DA_Portfolio/assets/151570035/ad7c6846-90c3-4bf1-bace-3dece16a8ef4)
 
-- Analysis of Large Anomalous Transactions
+![image](https://github.com/Mark-YuS/DA_Portfolio/assets/151570035/fe97bd13-7512-4108-bb20-ae97c85e7911)
 
-![image](https://github.com/datoujinggzj/DS_Project_Portfolio/assets/99417740/a25f4db3-8f24-418b-b38e-bd642786573a)
+![image](https://github.com/Mark-YuS/DA_Portfolio/assets/151570035/de288399-0169-4a8e-abad-471945aec907)
+
+![image](https://github.com/Mark-YuS/DA_Portfolio/assets/151570035/9ef62586-6e69-4b2b-b183-d311b30059f5)
 
 
 - Correlation Analysis
 
-![image](https://github.com/datoujinggzj/DS_Project_Portfolio/assets/99417740/f9fba23b-b652-4a7e-97d2-8359b32cdfee)
+![image](https://github.com/Mark-YuS/DA_Portfolio/assets/151570035/c5246093-020b-4118-9846-e5aa155d4d39)
+
 
 
 - Analysis of Bank and Alipay Interest Rates
 
-![image](https://github.com/datoujinggzj/DS_Project_Portfolio/assets/99417740/511e17d5-c143-439d-818d-4b7fcd883324)
-
-
-![image](https://github.com/datoujinggzj/DS_Project_Portfolio/assets/99417740/5f89cb95-74c6-4425-b352-328eae65851b)
+![image](https://github.com/Mark-YuS/DA_Portfolio/assets/151570035/42d0fef8-d6f9-4e0e-9da9-1116c7218fd0)
 
 
 ### 2. Model Baseline
 
-Considering the pronounced cyclical patterns observed in the time series data of Yu'ebao, this project adopts a cyclical factor model for analysis.
+Given the pronounced cyclical patterns observed in the time series data of Yu'ebao, this project adopts a cyclical factor model for analysis.
 
-**Calculation of Cyclical Factors (factors):** Involves the computation of cyclical factors that capture the periodic behavior present within the data.
+**Cyclical Factor Computation (factors):** This involves calculating factors that capture the periodic behaviors evident within the data.
 
-**Calculation of Base (base):** Involves the determination of a baseline value (base) that represents the underlying trend of the data, independent of the cyclicality.
+**Baseline Determination (base):** This process establishes a baseline value (base) that represents the fundamental trend of the data, separate from its cyclicality.
 
-**Forecasting Process:** The forecasting of future values is achieved by multiplying the calculated base value with the corresponding cyclical factor (**forecast = base * factors**).
+**Forecasting Method:** The forecasting of future values is achieved by multiplying the determined base value with the appropriate cyclical factors (**forecast = base * factors**).
+
 
 ---
 
