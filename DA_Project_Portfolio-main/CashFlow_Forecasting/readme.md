@@ -7,81 +7,82 @@
 
 
 ## Background
+Yu'eBao is an online wealth management platform in China, offered through Alipay, one of the world's largest mobile and online payment platforms. It allows users to invest their idle money into money market funds directly through the Alipay app. Yu'eBao is known for its ease of use, offering users the flexibility to earn interest on funds that can be withdrawn at any time, making it a popular choice for everyday investment and savings management. This platform provides an accessible way for individuals to manage their funds actively while benefiting from relatively stable returns compared to traditional savings accounts.
 
-> The investment funds of Yu'ebao are mainly used to purchase short-term, low-risk money market funds. These funds mainly invest in low-risk investment instruments such as government bonds, central bank bills, and bank deposits. Therefore, the risk is relatively low, making it suitable for users who have short-term capital management needs and are more conservative in their investment preferences.
->
-> The main source of income for Yu'ebao comes from the money market fund it invests in. Investors can check their daily earnings through the Alipay app and withdraw funds to their Alipay account at any time for use. However, it should be noted that since money market funds are market investments, their returns are not stable and may be affected by factors such as market interest rates and economic conditions, which pose certain investment risks. When using Yu'ebao, investors should carefully understand the product's risk and return characteristics, and make wise investment decisions based on their own risk tolerance and investment goals. At the same time, the earnings of Yu'ebao are also subject to regulatory policies and product regulations, and investors should pay close attention to changes in relevant policies and regulations.
+Yu'eBao primarily allocates its funds into short-term, low-risk money market funds. These investments are typically safe options like government bonds, central bank bills, and bank deposits, making them a good fit for users with conservative investment preferences and short-term financial management needs, due to their lower risk profile.
+
+The principal income for Yu'eBao is derived from the returns of the money market funds it invests in. Investors have the convenience of monitoring their daily profits via the Alipay app and can transfer funds to their Alipay account anytime for immediate use. However, it is important to recognize that returns from money market funds can fluctuate due to varying market interest rates and economic conditions, introducing some level of investment risk. Investors using Yu'ebao should thoroughly understand the risk and return profile of the product, and make investment choices that align with their personal risk appetite and financial goals. Additionally, the earnings from Yu'ebao are influenced by regulatory policies and product rules, necessitating that investors stay informed about pertinent policy and regulatory changes.
 
 ### Project Overview
 
-Ant Financial Services Group (AFSG) manages the cash inflow and outflow of millions of members. Accurately predicting future cash flows based on historical data is vital to AFSG's operations. This project aims to leverage machine learning techniques to forecast future cash flows by analyzing users' historical purchase and redemption data. The insights gained will empower AFSG to enhance its funds management capabilities, ensuring efficient cash flow management.
+The YueBao oversees the cash transactions of millions of users. It's crucial for them to predict future cash flows accurately using historical transaction data. This project is dedicated to utilizing machine learning methods to project future cash flows by examining past data on user purchases and redemptions. The insights derived from this analysis will enable YueBao to improve its fund management practices, thereby optimizing cash flow management.
 
 ### Project Objectives
 
-1. **Cash Flow Forecasting:** Develop machine learning models to predict future cash inflows (purchases) and outflows (redemptions) based on historical user transaction data.
-2. **Enhanced Funds Management:** Provide AFSG with actionable insights to optimize its funds management strategies and decision-making.
-3. **Business Efficiency:** Improve operational efficiency by aligning cash inflow and outflow predictions with actual user behavior.
+1. **In-depth Data Insights:** Conduct comprehensive exploratory data analysis (EDA) to uncover patterns and trends in cash flow activities. This foundational work will provide YueBao with detailed insights that are critical for understanding current dynamics and anticipating future shifts in user behavior.
+2. **Cash Flow Forecasting:** Following the initial data analysis, develop sophisticated machine learning models that predict future cash inflows (purchases) and outflows (redemptions). These models will leverage historical user transaction data to forecast future trends, supporting more informed decision-making.
+3. **Strategic Business Alignment:** Use the insights gained from both the EDA and predictive modeling to align YueBao’s operational strategies more closely with actual user behavior. This alignment will enhance business efficiency and adaptability, ensuring that YueBao can effectively respond to evolving market conditions.
 
 ### Impact & Expected Results
 
 #### Potential benefits
 
-If we can accurately predict the daily inflows and outflows of currency funds such as Yu'EBao, it can bring the following potential benefits:
+If we can accurately predict the daily inflows and outflows of currency funds, it can bring the following potential benefits:
 
-1. **Optimization of investment decisions:** Accurate predictions of fund inflows and outflows can help investors better understand market demand and redemption situations, thereby optimizing capital allocation and investment decisions. For example, if large inflows are predicted, investors can increase their subscription amount in a timely manner; if large outflows are predicted, investors can consider adjusting their redemption plan to avoid possible market risks.
-2. **Improve capital operation efficiency:** Accurately predicting the inflow and outflow of funds can help fund managers better plan and manage funds, thereby improving capital operation efficiency. For example, based on the predicted results, a reasonable fund investment plan can be arranged to avoid the situation of idle or insufficient funds, thus maximizing the return and utilization of funds.
-3. **Reduce risks:** The inflow and outflow of funds are crucial for the stable operation of currency funds. Accurate predictions can avoid potential risks caused by unstable inflows and outflows, such as redemption pressure and insufficient funds. At the same time, it can also help investors better cope with market volatility and risks, and make wiser investment decisions.
-4. **Enhance competitive advantages:** Accurately predicting fund inflows and outflows can help financial institutions better understand market demand and investor behavior, thereby optimizing product design and service strategies, and enhancing competitive advantages. For example, based on predicted results, product subscription and redemption rules can be flexibly adjusted to attract more investors, increase fund size and management fee income.
+1. **Optimization of investment decisions:** Reliable forecasts of fund inflows and outflows enable investors to gauge market demand and redemption conditions more accurately, facilitating better capital allocation and investment choices. For instance, anticipated large inflows may prompt investors to increase their invested amounts promptly; conversely, expected large outflows might lead investors to modify their redemption strategies to mitigate potential market risks.
+2. **Improve capital operation efficiency:** Reliable predictions of fund movements aid fund managers in planning and optimizing fund management, thus enhancing capital operation efficiency. For example, with accurate forecasting, fund managers can devise investment plans that prevent funds from being idle or insufficient, maximizing both fund returns and utilization.
+3. **Risk Reduction:** Stable fund management depends on the predictable movement of money. Accurate forecasts help mitigate risks associated with fluctuating fund flows, such as redemption pressures or liquidity shortages. This foresight also assists investors in navigating market fluctuations more effectively, supporting more informed and cautious investment decisions.
+4. **Enhance competitive advantages:** By accurately predicting fund flows, financial institutions can better understand market demands and investor behaviors, which in turn aids in refining product offerings and service strategies, thus bolstering competitive edges. For instance, financial institutions might adjust subscription and redemption rules based on these forecasts to attract more investors, thereby increasing the fund's size and management fee revenue.
 
-#### Submission
+#### Project Outcomes
 
 | Attribute   | Type   | Description                     | Example  |
 | ----------- | ------ | ------------------------------- | -------- |
 | report_date | bigint | Date                            | 20140901 |
-| purchase    | bigint | Prediction Amount of Purchase   | 40000000 |
-| redeem      | bigint | Prediction Amount of Redemption | 30000000 |
+| purchase    | bigint | Predicted Amount of Purchase   | 30020002 |
+| redeem      | bigint | Predicted Amount of Redemption | 30202020 |
 
 ### Description & Data inspection
 
 #### 1. User profile table
 
-We randomly selected a total number of 30,000 users. Those who appeared in September 2014 for the first time have been put into the test data set. So that the training data set includes about 28,000 users. The attributes info is shown in table 1:
+A total of about 30,000 users were randomly sampled, some of whom appeared for the first time in September 2014 and only appear in the test data. Therefore, the user information table is about 28,000 users' basic data, which mainly includes users' gender, city, and zodiac after processing the original data. 
 
 **Table 1: User profile table: user_profile_table**
 
-| Attribute     | Type   | Description                  | Example     |
-| ------------- | ------ | ---------------------------- | ----------- |
-| user_id       | bigint | User ID                      | 1234        |
-| Sex           | bigint | Gender (1: male, 0: female)  | 0           |
-| City          | bigint | Which city the user lives in | 6081949     |
-| Constellation | string | Constellation                | Sagittarius |
+| Attribute     | Type   | Description                  
+| ------------- | ------ | ---------------------------- 
+| user_id       | bigint | User ID                     
+| Sex           | bigint | Gender (1: male, 0: female)  
+| City          | bigint | Which city the user lives in 
+| Constellation | string | Constellation                
 
 #### 2. Purchase and redemption sheet
 
-It contains about 2.8 million records, which include the purchase and redemption behaviors during 2013.07.01-2014.08.31, and the information of all sub categories. The data has been desensitized on the premise of basically keeping the original trend. The data includes operation time and operation record (in both purchase and redemption). Amount is measured by fen (i.e. CNY 0.01). If consume_amt  = 0, the catogory1 to catogory4 are null.
+It contains transaction information from July 1, 2013, to August 31, 2014, along with all sub-category information, and the data has been desensitized. The desensitized data largely remains the original data trend. Data mainly includes user operation time and records, where the records include subscription and redemption parts. The unit of amount is cents, i.e., 0.01 Chinese RMB. If the user's total consumption for the day is 0, i.e., consume_amt=0, then the four subcategories are empty. 
 
 **Table 2: Purchase andredemption sheet: user_balance_table**
 
-| Attribute           | Type   | Description                                                  | Example  |
-| ------------------- | ------ | ------------------------------------------------------------ | -------- |
-| user_id             | bigint | User ID                                                      | 1234     |
-| report_date         | string | Date                                                         | 20140407 |
-| tBalance            | bigint | Today' s closing balance                                     | 109004   |
-| yBalance            | bigint | Yesterday's closing balance                                  | 97389    |
-| total_purchase_amt  | bigint | Today total purchase = direct purchase + revenue             | 21876    |
-| direct_purchase_amt | bigint | Today's direct purchase                                      | 21863    |
-| purchase_bal_amt    | bigint | Today's purchase from Alipay balance                         | 0        |
-| purchase_bank_amt   | bigint | Today's purchase from bank cards                             | 21863    |
-| total_redeem_amt    | bigint | Today's total redemption amount = consumption + transfer amount | 10261    |
-| consume_amt         | bigint | Today's total consumption                                    | 0        |
-| transfer_amt        | bigint | Toda y ' s total transfer amount                             | 10261    |
-| tftobal_amt         | bigint | Today's total transfer amount to Alipay balance              | 0        |
-| tftocard_amt        | bigint | Today's total transfer amount into bank cards                | 10261    |
-| share_amt           | bigint | Today's revenue                                              | 13       |
-| category1           | bigint | Today's consumption for category 1                           | 0        |
-| category2           | bigint | Today's consumption for category 2                           | 0        |
-| category3           | bigint | Today's consumption for category 3                           | 0        |
-| category4           | bigint | Today's consumption for category 4                           | 0        |
+| Attribute           | Type   | Description                                                  
+| ------------------- | ------ | ------------------------------------------------------------ 
+| user_id             | bigint | User ID                                                     
+| report_date         | string | Date                                                         
+| tBalance            | bigint | Today' s closing balance                                     
+| yBalance            | bigint | Yesterday's closing balance                                  
+| total_purchase_amt  | bigint | Today total purchase = direct purchase + revenue             
+| direct_purchase_amt | bigint | Today's direct purchase                                     
+| purchase_bal_amt    | bigint | Today's purchase from Alipay balance                       
+| purchase_bank_amt   | bigint | Today's purchase from bank cards                            
+| total_redeem_amt    | bigint | Today's total redemption amount = consumption + transfer amount 
+| consume_amt         | bigint | Today's total consumption                                    
+| transfer_amt        | bigint | Toda y ' s total transfer amount                             
+| tftobal_amt         | bigint | Today's total transfer amount to Alipay balance              
+| tftocard_amt        | bigint | Today's total transfer amount into bank cards               
+| share_amt           | bigint | Today's revenue                                              
+| category1           | bigint | Today's consumption for category 1                           
+| category2           | bigint | Today's consumption for category 2                          
+| category3           | bigint | Today's consumption for category 3                           
+| category4           | bigint | Today's consumption for category 4                           
 
 Note1: The above data has been desensitized. Revenue has been recalculated through as implified calculation approach. We describe it in Section 4.
 
@@ -91,7 +92,7 @@ Note2: The desensitized data ensures that: today's closing balance = yesterday's
 
 Yields rate table includes rate of revenue of Yu 'E Bao within 14 months. Detailed descriptions are shown in table 3:
 
-**Table 3: mfd_day_share_interest**
+**Table 3: yield_rates**
 
 | Attribute        | Type   | Description               | Example  |
 | ---------------- | ------ | ------------------------- | -------- |
@@ -99,9 +100,9 @@ Yields rate table includes rate of revenue of Yu 'E Bao within 14 months. Detail
 | mfd_daily_yield  | double | Revenue per 1000,000 fen  | 1.5787   |
 | mfd_7daily_yield | double | 7-Day Annualized Yield(%) | 6.307    |
 
-#### 4. Shanghai Interbank Offered Rate (Shibor) Table
+#### 4.  Interbank Offered Rate Table
 
-Shanghai Interbank offered rate table includes 14-month lending rates per day among banks (all are annualized rates). Detailed descriptions are shown in table 4:
+Interbank offered rate table includes 14-month lending rates per day among banks (all are annualized rates). Detailed descriptions are shown in table 4:
 
 **Table 4 : mdf_bank_shilbor**
 
