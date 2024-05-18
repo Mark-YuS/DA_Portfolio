@@ -118,23 +118,23 @@ Interbank offered rate table includes 14-month lending rates per day among banks
 | Interest _ 9_M | double | 9-monthSHIBOR (%)    | 4.76     |
 | Interest _ 1_Y | double | 1-YearSHIBOR (%)     | 4.78     |
 
-### Evaluation 
+### Predictions Evaluation 
 
-We expect to gain accurate forecasting of the daily amount of purchase and redemption in the next 30 days. The higher accuracy is preferred. However, we need to take different situations into account. For instance, some participants may have a result that shows 29 days’ accurate predictions but one day’s inaccurate prediction. Some participants may have a result that 30 days’ predictions are not accurate enough, with an average error of delta (delta is some small value). Adopt absolute error as the evaluation metric may result in a poorer score for the former than that of the latter. However, we prefer the model of the former in the real-world business. Therefore, we use the following evaluation metric. The final score-counting method is given as follows: We use the relative error of purchase and redemption to compute the daily score based on a scoring function. Then, summarize the daily scores. Finally the scores are weighted according to the factors of real-world business. We provide the details of the evaluation metric as follows.
+In this project, we employ the Mean Absolute Percentage Error (MAPE) to assess the accuracy of our predictive models for forecasting daily cash inflows (purchases) and outflows (redemptions). MAPE quantifies the precision of predictions by calculating the average of absolute errors as a percentage of the actual values. This metric is particularly advantageous as it normalizes the errors, providing a clear and interpretable measure of model performance across different scales of data. By focusing on percentage errors, MAPE allows us to effectively compare the predictive accuracy across all days in the evaluation period, making it a robust indicator of the model’s real-world applicability and effectiveness. This approach ensures that our models are refined to prioritize accuracy in daily forecasting, aligning with our goal of enhancing operational decision-making in financial management.
 
-1) Calculating the relative error of purchase and redemption:
+The formula for Mean Absolute Percentage Error (MAPE) is given by:
+
+$$
+\text{MAPE} = \left(\frac{1}{n} \sum_{i=1}^{n} \left|\frac{y_i - \hat{y}_i}{y_i}\right|\right) \times 100\%
+$$
 
 
+where:
+- ( n ) is the number of observations,
+- $( y_i )$ is the actual value of the data point
+- $(\hat{y}_i)$ is the predicted value. 
 
-![img](https://gtms03.alicdn.com/tps/i3/TB1z6RVHVXXXXb1XXXX0yWmWVXX-525-141.png)
 
-2) The scoring function f(*) (monotonous decreasing) is used to evaluate the purchase and redemption error. Purchase prediction score is related to the error Purchase i ; so does redemption. For example, if the purchase error $Purchase_i$ =0 on ith day, 10 points are obtained for this day. If $Purchase_i$ > 0.3 , the score is 0.
-
-3) Finally, Total Score =
-
-![img](https://gtms02.alicdn.com/tps/i2/TB11mksHFXXXXXpXVXX1Ze.NVXX-343-20.png)
-
-The scoring function f(*) is not for public.
 
 ## Project Phases
 
