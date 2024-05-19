@@ -2,7 +2,7 @@
 
 - Unveiling Business Insights - A Comprehensive Data Analysis of Yelp Dataset
 - Empowering User Experience - Optimizing Product Recommendations through AB Testing and UI Enhancements
-- Revolutionizing Cash Flow Forecasts - A Paradigm Shift in Purchase and Redemption Predictions
+- Cash Flow Forecasts - A Paradigm Shift in Purchase and Redemption Predictions
 
 
 | Project Detail | Data Link |
@@ -64,36 +64,25 @@
 - Conducted thorough data analysis to identify correlations between UI changes and operational efficiencies, empowering stakeholders to prioritize initiatives effectively.
 
 
-## Revolutionizing Cash Flow Forecasts - A Paradigm Shift in Purchase and Redemption Predictions
+## Cash Flow Forecasts - Purchase and Redemption Predictions
 
-<p>
-  <img src="https://www.freshbooks.com/wp-content/uploads/2021/09/cash-inflow-vs-outflow.jpg" alt="Image" width="400" height="250">
+<p align="center">
+  <img src="https://github.com/Mark-YuS/DA_Portfolio/assets/151570035/e673825d-01df-483e-bab2-639e1576e564" alt="Image" width="700" height="400">
 </p>
 
 
-**Led a High-Performance Team and Transformed Financial Forecasting for Ant Financial Services Group (AFSG)**
+**Sophisticated Data Analysis**
+- Employ advanced data analysis techniques to enhance understanding of transaction patterns and support model optimization.
+- Utilize **Seaborn** and **Matplotlib**, powerful Python libraries, for creating detailed and informative visualizations that clearly illustrate transaction trends.
+- Use visualizations to identify seasonal effects, cyclical patterns, and anomalies within the data, aiding intuitive and hypothesis-driven data exploration.
+- Perform time series decomposition to break down transaction data into trend, seasonal, and residual components, providing clear insights into underlying structures.
+- Conduct correlation analysis using visual tools to assess relationships between various features within the dataset.
 
-- Orchestrated and guided a team of skilled data scientists to undertake a transformative project aimed at enhancing AFSG's funds management capabilities through advanced forecasting models.
-- Consolidated and harnessed the power of historical purchase and redemption data from over 100k users, meticulously processed and integrated from 4 independent sources into a robust MySQL database.
 
-**Revolutionary Model Optimization with Python Pipeline**
+**Comparative Analysis of Deep Learning and ARIMA Models for Forecasting**
+- Utilize grid search to identify the optimal parameters for constructing the ARIMA model, ensuring the best possible fit for the data.
+- Employ Mean Absolute Percentage Error (MAPE) as the evaluation metric to measure the accuracy of the ARIMA model's forecasts.
+- Develop a univariate multi-step LSTM model to train and predict future data points, focusing on single-variable time series forecasting.
+- Contrast the performance of the ARIMA model with the LSTM model to determine strengths and weaknesses of each in handling different aspects of the forecasting task.
 
-- Leveraged Python to craft a sophisticated and streamlined data processing pipeline, encompassing data validation, feature engineering, and transformation, reducing model execution time by an astounding 4 minutes per epoch.
-- Implemented cutting-edge machine learning techniques and fine-tuned hyperparameters, resulting in exceptional forecast accuracy that outperformed traditional baseline models.
-
-**Pioneering Forecasting Models and Achievement-Driven Results**
-
-- Developed a diverse set of over 10 systematic forecasting models, including univariate and multivariate approaches, that delivered unparalleled predictive insights into future cash flows.
-- Utilized innovative techniques, such as weighted averaging of purchase and redemption errors, leading to the identification of the best-performing model—LSTM—exhibiting an impressive uplift in predictive accuracy.
-
-**Tailored Seasonal and Holiday Adjustments for Precision**
-
-- Engineered customized seasonal, new shares, and public holiday adjustments, expertly tailored to meet the stringent requirements of STL decomposition, driving model iteration and optimization.
-- Achieved a significant score of 135, a testament to the models' adaptability and effectiveness in capturing complex patterns within the cash flow data.
-
-**Impactful Value Generation and Data-Driven Decisions**
-
-- Empowered AFSG with unparalleled forecasting capabilities, enabling precise and well-informed funds management decisions based on accurate predictions.
-- Exceeded baseline performance by a substantial margin, resulting in a quantifiable enhancement of 15% in forecasting accuracy, positively influencing the organization's financial strategies.
-- Cultivated a data-driven culture within AFSG, elevating the importance of data science in shaping strategic decisions and driving business success.
 
